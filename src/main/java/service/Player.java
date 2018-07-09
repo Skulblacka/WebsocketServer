@@ -44,7 +44,7 @@ public class Player {
     }
 
     public String getName() {
-        System.out.println(name);
+        System.out.println("name: "+name+"  "+pos_X+":"+pos_Y);
         return this.name;
     }
      public int getPlayerID(){
