@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Manager {
+public class Manager2 {
 
     List<Player> players= new ArrayList<Player>();
     int pos_x=100;
