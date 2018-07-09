@@ -43,12 +43,13 @@ public class Manager {
     private String buildLobbySituation(Player player) {
 
         JsonStructure json = new JsonStructure();
-        json.values = new String[10][3];
+        json.values = new String[10][4];
         int i = 0;
         for (Player p : players) {
                 json.values[i][0] = p.getName();
                 json.values[i][1] = "" + p.getPosition_X();
-                json.values[i][2] = "" + p.getPlayerID();
+                json.values[i][2] = "" + p.getPosition_Y();
+                json.values[i][3] = "" + p.getPlayerID();
 
             i++;
         }
@@ -58,16 +59,16 @@ public class Manager {
 
     private void movePlayer(Player player, String key) {
         if (key.equals("a")) {
-            player.move(-1);
+            player.move_X(-1);
         }
         if (key.equals("d")) {
-            player.move(1);
+            player.move_X(1);
         }
         if (key.equals("s")) {
-
+            player.move_Y(1);
         }
         if (key.equals("w")) {
-
+            player.move_Y(-1);
         }
     }
 
